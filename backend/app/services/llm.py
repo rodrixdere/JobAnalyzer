@@ -1,6 +1,5 @@
 import json
-from google.genai import types
-from app.services.gemini import client
+from app.services.groq_client import client
 
 
 def build_analysis_prompt(profile: dict, job_text: str) -> str:
@@ -37,12 +36,13 @@ Criterios del match_score:
 async def analyze_job_offer(profile: dict, job_text: str) -> dict:
     prompt = build_analysis_prompt(profile, job_text)
 
-    response = await client.aio.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
+    response = await client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.3,
     )
 
-    raw = response.text.strip()
+    raw = response.choices[0].message.content.strip()
 
     try:
         result = json.loads(raw)
