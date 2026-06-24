@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080
-    GEMINI_API_KEY: str
+    GROQ_API_KEY: str
     ALLOWED_ORIGINS: List[str] = ["http://localhost:5173"]
 
     class Config:

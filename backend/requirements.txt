@@ -8,6 +8,12 @@ pydantic-settings
 python-dotenv
 python-jose[cryptography]
 passlib[bcrypt]
+bcrypt==4.0.1
 python-multipart
 httpx
-google-genai
+email-validator
+pymupdf
+python-docx
+groq
+pytest
+pytest-asyncio

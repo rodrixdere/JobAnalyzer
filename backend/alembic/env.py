@@ -7,6 +7,7 @@ from app.db.base import Base
 from app.models.user import User
 from app.models.profile import UserProfile
 from app.models.analysis import Analysis
+from app.models.tracker import JobApplication
 
 config = context.config
 
