@@ -1,6 +1,28 @@
-.env
+# Entorno virtual
 venv/
+.venv/
+
+# Bytecode de Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
+
+# Empaquetado
+*.egg-info/
+build/
+dist/
+
+# Test / cobertura / type checkers
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Secretos (la plantilla .env.example sí se versiona)
+.env
+.env.*
+!.env.example
+
+# SO
 .DS_Store

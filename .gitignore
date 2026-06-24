@@ -1,0 +1,25 @@
+# === Entorno / secretos ===
+.env
+.env.*
+!.env.example
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# === Editores / IDEs ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sw?
+
+# === Logs ===
+*.log
+logs/
+
+# === Red de seguridad (por si se corre algo fuera de su subcarpeta) ===
+__pycache__/
+node_modules/
